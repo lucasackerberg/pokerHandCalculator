@@ -5,12 +5,10 @@ PokerHandsCalculator is a web application built with Vue.js and Laravel that cal
 ## Table of Contents
 
 - [Features](#features)
-- [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-- [Contact](#contact)
 
 ## Features
 
@@ -20,6 +18,14 @@ PokerHandsCalculator is a web application built with Vue.js and Laravel that cal
 - **Backend Calculations**: Utilizes Laravel for efficient backend processing and calculations.
 - **Real-Time Updates**: Instant feedback and updates as you input different hands and scenarios.
 
+## Contributing
+Contributions are welcome! Please follow these steps to contribute:
+
+Fork the repository.
+Create a new branch.
+Commit your changes.
+Push to the branch.
+Open a Pull Request.
 
 ## Installation
 
@@ -33,3 +39,47 @@ Make sure you have the following software installed:
 - [NPM](https://www.npmjs.com/) (Node Package Manager)
 - [Composer](https://getcomposer.org/) (PHP dependency manager)
 - [PHP](https://www.php.net/) (version 7.4 or later)
+
+Clone the repository!
+
+Backend Setup (Laravel)
+Install Dependencies:
+
+bash
+```
+composer install
+```
+
+Copy the .env File:
+```
+cp .env.example .env
+```
+
+Generate Application Key:
+```
+php artisan key:generate
+```
+
+Configure Environment Variables:
+
+Update the .env file with your database credentials and other necessary settings.
+
+Run Migrations:
+```
+php artisan migrate
+```
+
+Start the Laravel Development Server:
+```
+php artisan serve
+```
+
+Install Dependencies:
+```
+npm install
+```
+
+Compile and Hot-Reload for Development:
+```
+npm run serve
+```
