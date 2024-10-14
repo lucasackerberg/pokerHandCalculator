@@ -66,7 +66,7 @@ export const cardImages = {
     '7c': clubs_7,
     '8c': clubs_8,
     '9c': clubs_9,
-    '10c': clubs_10,
+    'Tc': clubs_10,
     'Jc': clubs_J,
     'Qc': clubs_Q,
     'Kc': clubs_K,
