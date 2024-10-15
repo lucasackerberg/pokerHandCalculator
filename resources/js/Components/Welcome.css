@@ -1,42 +1,64 @@
-
-
-.containerMain {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background-color: antiquewhite;
+html, body {
+  margin: 0px;
 }
 
-.pokerhandsDisplay {
-    display: flex;
-    height: 50%;
-    width: 50%;
+.containerMain {
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
 }
 
 h1 {
-    font-size: 40px;
-    color: red;
-    text-align: center;
+  font-size: 40px;
+  color: red;
+  text-align: center;
+  margin: 20px;
+}
+
+.pokerhandsDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  padding: 10px;
+}
+
+button,
+input {
+  font-size: 16px;
+  margin: 5px;
+  padding: 8px;
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+
+input {
+  min-width: 135px; /* Ensures that the input placeholder is not cut off */
 }
 
 /* CARDS */
 
 .pokerCards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
-  .card {
-    text-align: center;
-  }
-  
-  .card-image {
-    width: 60px;
-    height: 90px;
-  }
-  
-  .card-label {
-    margin-top: 5px;
-  }
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.card {
+  text-align: center;
+  margin: 10px;
+}
+
+.card-image {
+  width: 60px;
+  height: 90px;
+}
+
+.card-label {
+  margin-top: 5px;
+}
