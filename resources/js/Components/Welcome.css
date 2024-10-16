@@ -62,6 +62,12 @@ input:focus {
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
 
+input:read-only {
+  background-color: #f0f0f0;
+  color: #888;
+  cursor: not-allowed;
+}
+
 /* CARDS */
 
 .pokerCards {
