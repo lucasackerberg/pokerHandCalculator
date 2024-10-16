@@ -18,7 +18,13 @@
     </div>
     <div class="pokerCards">
       <!-- Display card images -->
-      <div v-for="(image, card) in cardImages" :key="card" class="card" @click="addCard(card)">
+      <div 
+        v-for="(image, card) in cardImages" 
+        :key="card" 
+        class="card" 
+        :class="{ selected: isCardSelected(card) }"
+        @click="addCard(card)"
+      >
         <img :src="image" :alt="card" class="card-image"/>
         <div class="card-label">{{ formatCardLabel(card) }}</div>
       </div>
@@ -135,6 +141,11 @@ export default {
       this.selectedPlayer1Cards = [];
       this.selectedPlayer2Cards = [];
       this.selectedBoardCards = [];
+    },
+    isCardSelected(card) {
+      return this.selectedPlayer1Cards.includes(card) ||
+             this.selectedPlayer2Cards.includes(card) ||
+             this.selectedBoardCards.includes(card);
     }
   }
 };

@@ -111,3 +111,14 @@ input:read-only {
   font-size: 14px;
   color: #34495e;
 }
+
+.card.selected {
+  background-color: #d4e6f1;
+  border: 1px dashed #3498db;
+  transform: translateY(5px);
+  box-shadow: none;
+}
+
+.card.selected:hover {
+  cursor: not-allowed;
+}
