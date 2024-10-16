@@ -18,8 +18,8 @@
     </div>
     <div class="pokerCards">
       <!-- Display card images -->
-      <div v-for="(image, card) in cardImages" :key="card" class="card">
-        <img :src="image" :alt="card" class="card-image" @click="addCard(card)" />
+      <div v-for="(image, card) in cardImages" :key="card" class="card" @click="addCard(card)">
+        <img :src="image" :alt="card" class="card-image"/>
         <div class="card-label">{{ formatCardLabel(card) }}</div>
       </div>
     </div>
