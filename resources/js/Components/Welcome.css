@@ -58,8 +58,6 @@ input {
 
 input:focus {
   outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
 
 input:read-only {
