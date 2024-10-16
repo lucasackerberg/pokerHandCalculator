@@ -1,6 +1,6 @@
 <template>
   <div class="containerMain">
-    <h1>Welcome to Lucas Poker Odds Calculator!</h1>
+    <h1>Lucas Poker Odds Calculator</h1>
     <div class="pokerhandsDisplay">
       <!-- Player inputs -->
       <input v-model="player1Hand" placeholder="Player 1 Hand (e.g., Qs Ks)" readonly/>
