@@ -1,16 +1,18 @@
 html, body {
   margin: 0px;
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .containerMain {
   display: flex;
   flex-direction: column;
-  background-color: antiquewhite;
+  background-color: rgb(215, 215, 215);
 }
 
 h1 {
   font-size: 40px;
-  color: red;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(68, 64, 82);
   text-align: center;
   margin: 20px;
 }
@@ -32,6 +34,8 @@ input {
   padding: 8px;
   flex: 1 1 200px;
   max-width: 300px;
+  border-radius: 10px;
+  border: none;
 }
 
 input {
@@ -41,7 +45,6 @@ input {
 /* CARDS */
 
 .pokerCards {
-  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -52,6 +55,17 @@ input {
 .card {
   text-align: center;
   margin: 10px;
+  background-color: rgb(233, 233, 233);
+  padding: 10px 5px 10px 5px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: rgb(161, 161, 161);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 .card-image {
@@ -60,5 +74,9 @@ input {
 }
 
 .card-label {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
   margin-top: 5px;
+  padding: 0px;
 }
