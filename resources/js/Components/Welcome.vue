@@ -1,6 +1,6 @@
 <template>
   <div class="containerMain">
-    <h1>Welcome to Lucas Poker Odds Calculator!</h1>
+    <h1>Lucas Poker Odds Calculator</h1>
     <div class="pokerhandsDisplay">
       <!-- Player inputs -->
       <input v-model="player1Hand" placeholder="Player 1 Hand (e.g., Qs Ks)" readonly/>
@@ -18,8 +18,14 @@
     </div>
     <div class="pokerCards">
       <!-- Display card images -->
-      <div v-for="(image, card) in cardImages" :key="card" class="card">
-        <img :src="image" :alt="card" class="card-image" @click="addCard(card)" />
+      <div 
+        v-for="(image, card) in cardImages" 
+        :key="card" 
+        class="card" 
+        :class="{ selected: isCardSelected(card) }"
+        @click="addCard(card)"
+      >
+        <img :src="image" :alt="card" class="card-image"/>
         <div class="card-label">{{ formatCardLabel(card) }}</div>
       </div>
     </div>
@@ -135,6 +141,11 @@ export default {
       this.selectedPlayer1Cards = [];
       this.selectedPlayer2Cards = [];
       this.selectedBoardCards = [];
+    },
+    isCardSelected(card) {
+      return this.selectedPlayer1Cards.includes(card) ||
+             this.selectedPlayer2Cards.includes(card) ||
+             this.selectedBoardCards.includes(card);
     }
   }
 };
